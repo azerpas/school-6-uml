@@ -9,6 +9,8 @@ public class Product {
     private Rehost rehost;
     private String description;
     private ArrayList<Feature> associatedFeatures;
+    private ArrayList<Product> provisionnalProducts;
+    private Product baseProduct;
 
     public Product(int id, String name, LockingType lockingType, Rehost rehost, String description) {
         this.id = id;

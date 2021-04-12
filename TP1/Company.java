@@ -10,6 +10,9 @@ public class Company extends Customer {
 
     Company(int id){
         super(id, CustomerType.Company, "");
+        this.contact = new Contact();
+        this.billing = new Details();
+        this.shipping = new Details();
     }
 
     Company(int id, String name, String phone, String fax){
