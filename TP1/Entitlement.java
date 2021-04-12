@@ -9,6 +9,7 @@ public class Entitlement {
     private Date endDate;
     private Boolean neverExpires;
     private String comments;
+    private Customer customer;
 
     Entitlement(){
         this.neverExpires = true;
@@ -73,5 +74,13 @@ public class Entitlement {
 
     public void setComments(String comments) {
         this.comments = comments;
+    }
+
+    public Customer getCustomer(){
+        return this.customer;
+    }
+
+    public void setCustomer(Customer customer){
+        this.customer = customer;
     }
 }
