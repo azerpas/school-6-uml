@@ -7,6 +7,8 @@ public class Individual extends Customer {
     private String email;
     private String phone;
     private String locale;
+    private Details billing;
+    private Details shipping;
 
     public Individual(int id, String firstname, String lastname, String middlename, String email, String phone){
         super(id, CustomerType.Individual, "");
@@ -16,11 +18,15 @@ public class Individual extends Customer {
         this.email = email;
         this.phone = phone;
         this.locale = "English";
+        this.billing = new Details();
+        this.shipping = new Details();
     }
 
     public Individual(int id){
         super(id, CustomerType.Individual, "");
         this.locale = "English";
+        this.billing = new Details();
+        this.shipping = new Details();
     }
 
     public String getFirstName() {
@@ -71,4 +77,19 @@ public class Individual extends Customer {
         this.locale = locale;
     }
 
+    public Details getBilling() {
+        return this.billing;
+    }
+
+    public void setBilling(Details billing) {
+        this.billing = billing;
+    }
+
+    public Details getShipping() {
+        return this.shipping;
+    }
+
+    public void setShipping(Details shipping) {
+        this.shipping = shipping;
+    }
 }

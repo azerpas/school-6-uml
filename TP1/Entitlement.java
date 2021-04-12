@@ -1,6 +1,7 @@
 package TP1;
 
 import java.util.Date;
+import java.util.Set;
 
 public class Entitlement {
     private String EIP;
@@ -10,6 +11,7 @@ public class Entitlement {
     private Boolean neverExpires;
     private String comments;
     private Customer customer;
+    private Set<Product> products;
 
     Entitlement(){
         this.neverExpires = true;
@@ -82,5 +84,13 @@ public class Entitlement {
 
     public void setCustomer(Customer customer){
         this.customer = customer;
+    }
+
+    public Set<Product> getProducts() {
+        return this.products;
+    }
+
+    public void setProducts(Set<Product> products) {
+        this.products = products;
     }
 }

@@ -17,6 +17,9 @@ public class Company extends Customer {
         this.name = name;
         this.phone = phone; 
         this.fax = fax;
+        this.contact = new Contact();
+        this.billing = new Details();
+        this.shipping = new Details();
     }
 
     public Contact getContact(){

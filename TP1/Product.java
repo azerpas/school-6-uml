@@ -1,11 +1,14 @@
 package TP1;
 
+import java.util.ArrayList;
+
 public class Product {
     private int id;
     private String name;
     private LockingType lockingType;
     private Rehost rehost;
     private String description;
+    private ArrayList<Feature> associatedFeatures;
 
     public Product(int id, String name, LockingType lockingType, Rehost rehost, String description) {
         this.id = id;
@@ -53,5 +56,13 @@ public class Product {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public ArrayList<Feature> getAssociatedFeatures() {
+        return this.associatedFeatures;
+    }
+
+    public void setAssociatedFeatures(ArrayList<Feature> associatedFeatures) {
+        this.associatedFeatures = associatedFeatures;
     }
 }
