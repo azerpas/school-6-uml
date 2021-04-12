@@ -8,7 +8,8 @@ public class Individual extends Customer {
     private String phone;
     private String locale;
 
-    public Individual(String firstname, String lastname, String middlename, String email, String phone){
+    public Individual(int id, String firstname, String lastname, String middlename, String email, String phone){
+        super(id, CustomerType.Individual, "");
         this.firstName = firstname;
         this.lastName = lastname;
         this.middleName = middlename;
@@ -17,7 +18,8 @@ public class Individual extends Customer {
         this.locale = "English";
     }
 
-    public Individual(){
+    public Individual(int id){
+        super(id, CustomerType.Individual, "");
         this.locale = "English";
     }
 }
